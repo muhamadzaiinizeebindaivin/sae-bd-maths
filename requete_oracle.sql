@@ -9,9 +9,9 @@ where idComposee=5 and idPiece=idComposant and idComposant in (
 
 
 -- 2. Lister les pièces composées triées par le nombre de composants qu’elles contiennent.
-select idPiece, nom, description,prixUnitaire, estComposee, count(idComposant) as nbcomposant 
-from PIECE join COMPOSITION on idPiece = idComposee 
-group by idPiece;
+select p.idPiece, p.nom, p.description, p.prixUnitaire, p.estComposee, count(c.idComposant) as nbcomposant 
+from PIECE p join COMPOSITION c on p.idPiece = c.idComposee 
+group by p.idPiece;
 
 
 
