@@ -18,20 +18,6 @@ create or replace table COMPOSITION (
     foreign key (idComposant) references PIECE(idPiece)
 );
 
-create or replace type EquipeT as object (
-    nomEquipe varchar(255), 
-    fonctionEquipe varchar(255),
-    member function get_nameSize RETURN number
-);
-/
-create type EquipeTabT as table of EquipeT;
-/
 
-create or replace type IndicesQualiteT as object (
-    nom varchar(255),
-    valeur int,
-    poids int
-);
-/
-create type qualiteList as VARRAY(10) of IndicesQualiteT;
-/
+
+
