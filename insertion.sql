@@ -1,13 +1,13 @@
 -- Insertion des pièces simples
 INSERT INTO PIECE (nom, description, prixUnitaire, estComposee) VALUES 
-    ('Vis en titane', 'Vis résistante utilisée dans la fabrication d''éléments aéronautiques', 2.50, false),
-    ('Rivets en aluminium', 'Rivets légers pour l''assemblage de pièces', 0.75, false),
-    ('Raidisseurs en composite', 'Élément structurel léger utilisé dans les structures aéronautiques', 15.00, false),
-    ('Plaque en alliage d''aluminium', 'Plaque robuste en alliage d''aluminium pour assemblage', 50.00, false);
+    ('Vis en titane', 'Description 1', 2.50, false),
+    ('Rivets en aluminium', 'Description 2', 0.75, false),
+    ('Raidisseurs en composite', 'Description 3', 15.00, false),
+    ('Plaque en alliage d''aluminium', 'Description 4', 50.00, false);
 
 -- Insertion de la pièce composée "Panneau de fuselage"
 INSERT INTO PIECE (nom, description, prixUnitaire, estComposee) VALUES 
-    ('Panneau de fuselage', 'Assemblage de plusieurs éléments pour constituer une partie du fuselage d''un avion', 200.00, true);
+    ('Panneau de fuselage', 'Description 5', 200.00, true);
 
 -- Insertion des composants pour le "Panneau de fuselage"
 INSERT INTO COMPOSITION (idComposee, idComposant, quantite) VALUES 
@@ -18,7 +18,7 @@ INSERT INTO COMPOSITION (idComposee, idComposant, quantite) VALUES
 
 -- Insertion de la pièce "Segment de fuselage"
 INSERT INTO PIECE (nom, description, prixUnitaire, estComposee) VALUES 
-    ('Segment de fuselage', 'Assemblage plus complexe dans la structure de l''avion', 1000.00, true);
+    ('Segment de fuselage', 'Description 6', 1000.00, true);
 
 -- Insertion de la relation entre "Segment de fuselage" et "Panneau de fuselage"
 INSERT INTO COMPOSITION (idComposee, idComposant, quantite) VALUES 

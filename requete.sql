@@ -1,5 +1,14 @@
 -- 1. Lister les composants directs d’une pièce composée spécifique avec leur quantité.
 
+select p.*, quantite
+from COMPOSITION, PIECE p
+where idComposee=5 and idPiece=idComposant and idComposant in (
+    select idComposant
+    from COMPOSITION
+    where idComposee=5
+);
+
+
 -- 2. Lister les pièces composées triées par le nombre de composants qu’elles contiennent.
 
 
@@ -32,3 +41,4 @@ SELECT idComposee, idComposant
 FROM PieceComposants 
 ORDER BY idComposee;
 
+-- 5. Trouver toutes les pièces (directes et indirectes) entrant dans la fabrication d’une pièce composée.
